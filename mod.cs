@@ -16,7 +16,6 @@ if (isObject(LiFxRaidProtectionTrigger))
 {
     LiFxRaidProtectionTrigger.delete();
 }
-exec("mods/lifx/config.cs");
 datablock TriggerData(LiFxRaidProtectionTrigger)
 {
     local = 1;
@@ -43,7 +42,7 @@ package LiFxRaidProtection {
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks,dbChanges, LiFxRaidProtection);
   }
   function LiFxRaidProtection::version() {
-    return "1.0.3";
+    return "1.0.4";
   }
   function LifXRaidprotection::dbChanges() {
     dbi.Update("ALTER TABLE `guild_standings` CHANGE COLUMN `StandingTypeID` `StandingTypeID` TINYINT(3) UNSIGNED NOT NULL DEFAULT '3' AFTER `GuildID2`;");
