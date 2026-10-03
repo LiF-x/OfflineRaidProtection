@@ -5,11 +5,23 @@
   "version": "1.1.0",
   "description": "Adds an offline-raid-protection divine shield. Repo README mandates the install dir be named `raidProtection` so the .dts asset reference resolves.",
   "authors": ["Christophe Roblin"],
-  "loadOrderHint": 100,
+  "source": {
+    "repo": "LiF-x/OfflineRaidProtection",
+    "commit": "c6ee1264018e96220537a26630a36071f0a8e947"
+  },
+  "baseline": {
+    "gameBuild": "sha256:d47ef6156423f1226b6d07a1f31f81d3aa94bc460cc1ac76bcf7d7ef9c305d4a",
+    "steamBuildId": "11261643"
+  },
+  "license": "GPL-3.0-only",
+  "distribution": "hostable",
+  "dependencies": ["LiF-x/ServerAutoloader", "LiF-x/ServerUtility"],
+  "loadOrderHint": 200,
+  "loadOrderNote": "Protection layer: observes connect/disconnect and Justice Hour state and spawns shields over world state, so it loads after plain behavioural mods.",
   "files": {
     "overlay": [
-      { "src": "mod.cs",           "dest": "mods/raidProtection/mod.cs" },
-      { "src": "divineShield.dts", "dest": "mods/raidProtection/divineShield.dts" }
+      { "target": "server", "src": "mod.cs",           "dest": "mods/raidProtection/mod.cs" },
+      { "target": "server", "src": "divineShield.dts", "dest": "mods/raidProtection/divineShield.dts" }
     ],
     "dataPatches": []
   }
