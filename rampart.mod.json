@@ -20,8 +20,8 @@
   "loadOrderNote": "Protection layer: observes connect/disconnect and Justice Hour state and spawns shields over world state, so it loads after plain behavioural mods.",
   "files": {
     "overlay": [
-      { "target": "server", "src": "mod.cs",           "dest": "mods/raidProtection/mod.cs" },
-      { "target": "server", "src": "divineShield.dts", "dest": "mods/raidProtection/divineShield.dts" }
+      { "src": "mod.cs",           "dest": "mods/raidProtection/mod.cs" },
+      { "src": "divineShield.dts", "dest": "mods/raidProtection/divineShield.dts" }
     ],
     "dataPatches": []
   }
